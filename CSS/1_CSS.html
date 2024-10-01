@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro to <CSS-1></CSS-1></title>
+</head>
+<!-- This is internal css -->
+ <!--Mostly we will be using external css by linking the css sheets to the html file  -->
+<style> 
+    * {
+        background-color: cyan; /* sets the background color of entire page to be cyan, applied for all elements through '*' */
+    }
+    /* * {
+        color: purple; --> sets the color of all elements to purple
+    } */
+    /* div {
+        color: aqua; --> sets the color of all div elements to be aqua
+    }
+    p {
+        color: red; --> sets the color of all div elements to be red
+    } */
+
+    .hello {
+        color: blue;
+        font-family: 'Cascadia code'; /* set the properties of elements under the class "hello" */
+    }
+    #title {
+        font-style: italic;
+        font-size: 20px; /* sets the properties of the element bearing the id "title" */
+    }
+</style>
+<body>
+    <div>This is a test paragraph element</div>
+    <div>This is a test paragraph element</div>
+    <div>This is a test paragraph element</div>
+    <p>Type 2 test paragraph element</p>
+    <h1 class="hello">This is a heading under hello class</h1>
+    <p id = "title" class="hello">This is a paragraph element under class "hello" and having id "title"</p>
+</body>
+</html>
