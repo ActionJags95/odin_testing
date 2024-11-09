@@ -33,4 +33,4 @@ function hello(name = "Chris") {
   
   hello("Ari"); // Hello Ari!
   hello(); // Hello Chris!
-  
+  hello();
