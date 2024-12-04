@@ -19,7 +19,7 @@ console.log(100/"Hello"); // division of number with a non-number and vice-versa
 
 let x = NaN;
 let y = 11;
-console.log(x + y);
+console.log(x + y); // Arithmetic operations with NaN results in NaN only
 
 //Infinity
 
