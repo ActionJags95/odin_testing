@@ -7,7 +7,20 @@
 </head>
 <body>
     <script>
-        console.log("Hello World")
+        function ask(question, yes, no) {
+            if (confirm(question)) yes()
+            else no();
+        }
+
+        function ifYes() {
+            alert("I Have responded");
+        }
+
+        function ifNo() {
+            alert("I have not responded");
+        }
+
+        ask("Have you responded", ifYes, ifNo);
     </script>
 </body>
 </html>

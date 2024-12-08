@@ -34,3 +34,46 @@ function hello(name = "Chris") {
   hello("Ari"); // Hello Ari!
   hello(); // Hello Chris!
   hello();
+
+let name = "Jagruth"
+let display_name = function() {
+    console.log(name);
+}
+display_name(); // Another way to declare, define and use functions, also called as "Function Expressions"
+
+
+function display() {
+    console.log(name);
+}
+console.log(display);
+
+let func = display; // copies the function display
+// func = display() copies the output of the function display
+
+func();
+
+// function ask(question, yes, no) {
+//     if (confirm(question)) yes() // Send an alert to the webpage to get user request
+//     else no(); // Based on the user input, yes or no will be executed
+// }
+
+// function ifYes() {
+//     console.log("I Have responded");
+// }
+
+// function ifNo() {
+//     console.log("I have not responded");
+// }
+
+// ask("Have you responded", ifYes, ifNo); // Works if used alert instead of console.log   
+
+
+function sum (a, b) {
+    return a + b; // Function declaration
+}
+
+let sum = function(a, b) {
+    return a + b; // Function expression
+}
+
+console.log(sum(1, 2));
