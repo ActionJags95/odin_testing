@@ -7,20 +7,13 @@
 </head>
 <body>
     <script>
-        function ask(question, yes, no) {
-            if (confirm(question)) yes()
-            else no();
-        }
+        let age = prompt("What is your age"); // gets a prompt from the user and stores it in the variable age
 
-        function ifYes() {
-            alert("I Have responded");
+        if(age > 18) {
+            alert("Greetings");
+        } else {
+            alert("You need to grow");
         }
-
-        function ifNo() {
-            alert("I have not responded");
-        }
-
-        ask("Have you responded", ifYes, ifNo);
     </script>
 </body>
 </html>
