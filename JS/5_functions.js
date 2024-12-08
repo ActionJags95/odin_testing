@@ -68,12 +68,27 @@ func();
 // ask("Have you responded", ifYes, ifNo); // Works if used alert instead of console.log   
 
 
-function sum (a, b) {
-    return a + b; // Function declaration
-}
+// function sum (a, b) {
+//     return a + b; // Function declaration
+// }
 
 let sum = function(a, b) {
     return a + b; // Function expression
 }
 
 console.log(sum(1, 2));
+
+(
+    function() {
+        console.log("Hello");
+    }
+); // anonymous function
+
+
+let s = (
+    function() {
+        console.log("hi");
+    }
+) // assigning anonymous function with a variable
+
+s();
