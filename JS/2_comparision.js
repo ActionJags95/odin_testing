@@ -23,7 +23,7 @@ console.log(x + y); // Arithmetic operations with NaN results in NaN only
 
 //Infinity
 
-console.log(typeof(Infinity));
+console.log(typeof(Infinity)); // Infinity is a number
 console.log(8/0);
 
 let num = 2;
