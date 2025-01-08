@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DOM</title>
+    <script src="dom.js" defer></script> <!-- Defer is used so that DOM gets loaded while scirpts gets downloaded and executed. This prevents the script to have null bindings of the DOM -->
 </head>
-<script src="dom.js"></script>
 <body>
     <div id="container">
         <div class="display"></div>
         <div class="controls"></div>
     </div>
+    
+    <button onclick="alert('Button is clicked')">Click Me!</button>
+    <button onmousedown="alert('Scrolled')">Scroll</button>
+
+    <button id="btn">Click Me!</button>
+    <button id="hello">Hello World!</button>
 </body>
 </html>
