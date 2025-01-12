@@ -1,0 +1,13 @@
+/* Body of the website */
+body {
+    margin: 0px;
+    padding: 0px;
+    background: url(../img/Home/images.jpeg);
+    background-repeat: no-repeat;
+    /* Stops the background image from repeating */
+    background-size: cover;
+    /* Sets the image to full screen */
+    /* background-position: center; */
+    height: 1000px;
+    font-family: "Open Sans", serif;
+}
