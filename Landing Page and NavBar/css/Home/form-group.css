@@ -1,0 +1,36 @@
+/* CSS for container containing the form items */
+.container {
+    background-color: #00000054;
+    backdrop-filter: blur(1px);
+    border-radius: 30px;
+    width: 33%;
+    margin: 80px 25px;
+    padding: 50px 120px;
+    padding-top: 20px;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Heading of the container */
+.container h2{
+    margin: 30px 0px;
+    font-size: 45px;
+    font-weight: normal;
+    color: white;
+}
+
+/* Button present in the form */
+.from-group .btn{
+    margin-top: 15px;
+}
+
+/* Inputs present in the form */
+.from-group input{
+    font-size: 25px;
+    text-align: center;
+    margin: 5px 0px;
+    padding: 5px 50px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bolder;
+}
