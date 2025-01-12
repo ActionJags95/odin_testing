@@ -1,0 +1,64 @@
+a{
+    text-decoration: none;
+}
+.list a{
+    display: flex;
+    color: orange;
+    border: 3px solid rgb(10, 105, 16);
+    border-radius: 10px;
+    background-color: green;
+    font-size: 15px;
+    height: 20px;
+    width: 60px;
+    justify-content: center;
+    align-items: center ;
+}
+
+.list li {
+    margin: 3px;
+    display: inline-block;
+}
+
+.list{
+    display: flex;
+    padding: 0px;
+    justify-content: center;
+}
+
+a:hover {
+    color: green;
+    background-color: orange;
+    cursor: pointer;
+}
+a:active {
+    color: white;
+    background-color: black ;
+}
+
+a :visited {
+    color: blue;
+    background-color: slategray;
+}
+
+button {
+    border: none;
+    color: red;
+    background-color: green;
+    border-radius: 10px;
+    height: 30px;
+    width: 80px;
+}
+
+button:hover {
+    cursor: pointer;
+    color: green;
+    background-color: red;
+}
+button:visited{
+    color: blue;
+    background-color: blanchedalmond;
+}
+
+.btn {
+    text-align: center;
+}
