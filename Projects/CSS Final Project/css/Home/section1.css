@@ -1,0 +1,90 @@
+.section1{
+    background-color: #1F2937;
+    height: 520px;
+    border: none;
+
+}
+
+/* Header section */
+.section1 header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0px;
+    margin: 0px 170px;
+}
+
+/* Logo part */
+.section1 .logo{
+    color: #F9FAF8;
+    font-size: 24px;
+}
+
+/* Redirect Links */
+.header-links{
+    display: flex;
+    align-items: center;
+}
+.header-links ul{
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+.header-links li{
+    display: inline-block; /* Removes the dots for the links */
+}
+.header-links a{
+    text-decoration: none;
+    color: #e5e7eb;
+    font-size: 18px;
+    padding: 0px 10px;
+}
+.header-links a:hover{
+    text-decoration: underline;
+}
+
+/* Below header */
+.sub-header{
+    display: flex;
+    justify-content: center;
+    /* height: 300px; */
+    margin: 20px 40px;
+    padding: 40px 100px;
+}
+
+/* Text box */
+.text-content{
+    width: 50%;
+    margin: 20px;
+}
+.text-content .text{
+    font-size: 48px;
+    color: #F9FAF8;
+    font-weight: 900;
+    margin: 0;
+}
+.text-content .subtext{
+    font-size: 18px;
+    color: #e5e7eb;
+    margin: 0;
+}
+.text-content button {
+    color: white;
+    background-color: #3883f6;
+    border: none;
+    border-radius: 6px;
+    padding: 5px 20px;
+}
+.text-content .subtext, .text-content .text, .text-content .signup{
+    margin: 20px 10px;
+}
+
+/* Image place holder */
+.img-place-holder{
+    width: 50%;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: #ffffff3d;
+}
