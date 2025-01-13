@@ -1,0 +1,43 @@
+/* Section 2 */
+.section2{
+    border: 2px solid black;
+    height: 520px;
+}
+
+/* Text heading */
+.section2 p{
+    text-align: center;
+    color: #1f2937;
+    font-size: 36px;
+    font-weight: 900;
+}
+
+/* Content of section 2 */
+.content{
+    display: flex;
+    justify-content: center;
+    margin: 60px;
+    padding: 2px 2px;
+    height: 300px;
+}
+/* Boxes of section 2 */
+.box{
+    border: 3px solid #3882f6;
+    border-radius: 15px;
+    height: 135px;
+    width: 135px;
+    margin: 10px 2px;
+}
+.boxes{    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 220px;
+    margin: 1% 2%;
+    padding: 20px 20px;
+}
+.boxes .box-text{
+    text-align: center;
+}
