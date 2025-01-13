@@ -1,0 +1,50 @@
+/* CSS for section 4 */
+.section4{
+    padding: 20px 10%;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center ;
+}
+
+/* Sign box */
+.sign-box{
+    background-color: #3882f6;
+    padding: 20px 5%;
+    display: flex;
+    border-radius: 25px;
+}
+
+/* sign-up box text */
+.sign-text{
+    position: relative;
+    display: inline-block;
+    width: 66%;
+    height: 100%;
+}
+.sign-text .heading{
+    color: #1f2937;
+    font-weight: 900;
+    font-size: 36px;
+    margin: 20px 0px;
+}
+
+/* Sign up button */
+.sign-box .signup-btn{
+    display: inline-block;
+    position: relative;
+    width: 33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.signup-btn button{
+    color: azure;
+    background-color: #3882f6;
+    border: 2px solid azure;
+    border-radius: 15px;
+    font-size: 24px;
+    padding: 5px 30px;
+    margin: 2px 2px;
+
+}  
