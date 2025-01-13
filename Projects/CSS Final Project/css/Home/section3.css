@@ -1,0 +1,20 @@
+/* Section 3 */
+.section3{
+    height: 520px;
+    background-color: #e5e7eb;
+    padding: 0px 15%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.quote-content{
+    color: #1f2937;
+    font-size: 70px;
+    font-style: italic;
+    font-weight: lighter;
+}
+.quote-author{
+    display: flex;
+    justify-content: flex-end;
+    font-size: 20px;
+}
