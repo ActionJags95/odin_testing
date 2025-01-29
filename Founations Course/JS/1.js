@@ -4,7 +4,7 @@ console.log(myname);
 let surname = "Pillamari";
 console.log(surname); // assigning variable using let
 
-
+console.log("Small change");
 
 let age = 11;
 console.log(age);
