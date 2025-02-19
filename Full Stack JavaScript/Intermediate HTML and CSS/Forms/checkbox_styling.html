@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkbox Styling</title>
+</head>
+<style>
+  body{
+    /* background-color: red; */
+  }
+  :root {
+      --form-control-color: black; /* Define the color for the checkmark */
+  }
+  .form-control{
+    font-family: "Noto Sans";
+    display: grid;
+    grid-template-columns: 1em auto;
+    gap: 0.5em;
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.1;
+  }
+  /* input[type="checkbox"] {
+    appearance: none;
+    background-color: white;
+    margin: 0;
+    * to make the checkbox tick disappear* 
+  } */ 
+
+  input[type="checkbox"]{
+    appearance: none;
+    background-color: white;
+    margin: 0;
+
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  .form-control + .form-control {
+    margin-top: 1em;
+  }
+
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.5em;
+    height: 0.5em;
+    transform: scale(0);
+    transition: 120ms transform ease-in-out;
+    box-shadow: inset 1em 1em var(--form-control-color);
+  }
+
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+</style>
+<body>
+  <div>
+    <label class="form-control">
+      <input type="checkbox" name="checkbox" />
+      Checkbox
+    </label>
+    
+    <label class="form-control">
+      <input type="checkbox" name="checkbox-checked" checked />
+      Checkbox - checked
+    </label>
+  </div>
+</body>
+</html>
