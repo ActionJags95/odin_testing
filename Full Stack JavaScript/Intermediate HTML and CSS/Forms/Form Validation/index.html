@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+</head>
+<body>
+  <div>
+    <form action="" method="post">
+      <fieldset>
+        <legend>Enter email details</legend>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required> <!-- Makes sure that email is in correct format -->
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Submit</button>
+      </fieldset>
+
+      <fieldset style="display: flex; flex-direction: column;">
+        <legend>Textarea Validation</legend>
+        <label for="textarea">Enter your text</label>
+        <textarea name="text" id="textarea" required minlength="10" maxlength="40" rows="5" cols="100" placeholder="Maximum 40 characters"></textarea>
+        <!-- Sets the minimum and maximum number of character to be in the content box -->
+      </fieldset>
+
+      <fieldset>
+        <legend>Number range validations</legend>
+        <label for="time">Enter time</label>
+        <input type="time" name="time" id="time" max="17:00" min="13:00" step="900" > <!-- for time input, unit of step attribute is seconds -->
+        <!-- step = 900, means time increments by 900 seconds or 15 minutes in the input field -->
+        <label for="range">Range</label>
+        <input type="range" id="range" min="5" max="10" step="1" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Pattern validations</legend>
+        <!-- TODO: Study regex -->
+        <!-- Validation using regex is given using the 'pattern attribute' -->
+      </fieldset>
+    </form>
+  </div>
+</body>
+</html>
