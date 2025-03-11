@@ -60,33 +60,61 @@
     font-weight: bold;
   }
   .form-submit{
-    border: 2px solid red;
     height: 400px;
     width: 100%;
     background-color: white;
   }
   #ready-text{
     font-size: 30px;
+    padding-top: 10px;
+    margin: 3px 30px;
   }
   .form-group{
     display: flex;
     flex-wrap: wrap;
   }
   .labels{
-    /* border: 2px solid red; */
     height: 50px;
     width: 300px;
-    margin: 30px;
+    margin: 25px 40px;
     
   }
   .labels input, .labels label{
     display: block;
   }
   .labels input{
-    height: 20px;
+    outline: none;
+    border: 2px solid gray;
     border-radius: 5px;
+    height: 25px;
+    font-size: 20px;
+  }
+  .labels input:focus {
+    border: 2px solid blue;
+    outline: none;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.266);
+  }
+
+  .create-account{
+    color: white;
+    background-color: rgb(73, 99, 0);
     border: none;
-    background-color: rgb(239, 239, 239);
+    border-radius: 10px;
+    font-size: 15px;
+    margin: 20px 40px;
+    padding: 10px 30px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.407);
+  }
+
+  #login-text {
+    font-size: 15px;
+    margin: 2px 43px;
+    padding: 2px 2px;
+  }
+  #login-text a{
+    text-decoration: none;
+    color: rgb(73, 99, 0);
+    font-weight: bold;
   }
 
 </style>
@@ -101,7 +129,7 @@
     </div>
     <div class="form-area">
       <div class="form-desc">
-        <p>This is not a real online service! You know you need something like this in you life to help you realize your seepest dreams. Sign up <i>now</i> to get started.</p>
+        <p>This is not a real online service! You know you need something like this in your life to help you realize your seepest dreams. Sign up <i>now</i> to get started.</p>
         <p>You <i>know</i> you want to.</p>
       </div>
       <div class="form-submit">
@@ -138,8 +166,8 @@
           </div>
         </form>
       </div>
-      <button>Create Account</button>
-      <p>Already have an account? <a href="#">Log in</a></p>
+      <button class="create-account">Create Account</button>
+      <p id="login-text">Already have an account? <a href="#">Log in</a></p>
     </div>
   </div>
 </body>
