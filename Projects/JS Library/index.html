@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book List</title>
+</head>
+<link rel="stylesheet" href="CSS/index.css">
+<script src="JS/index.js" defer></script>
+<body>
+  <header>
+    <h1>Odin Books</h1>
+    <nav>
+      <button id="add-btn">Add a book</button>
+      <button>Contact</button>
+      <button>About US</button>
+    </nav>
+  </header>
+  <dialog id="book-dialog">
+    <h2>Enter the details of the book</h2>
+    <form class="book-form">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="author">Author</label>
+      <input type="text" id="author" name="author" required>
+
+      <label for="pages">No. of pages</label>
+      <input type="number" id="pages" name="pages" required step="1">
+
+      <div class="read-check">
+        <label for="read">Read?</label>
+        <input type="checkbox" id="read" name="read">
+      </div>
+      <div class="button-zone">
+        <button type="submit" id="submit-btn">Submit</button>
+        <button type="reset">Reset</button>
+        <button onclick="closeDialog()" id="close-btn">Close</button>
+      </div>
+    </form>
+  </dialog>
+  <main>
+    <div class="books-area">
+      
+    </div>
+  </main>
+</body>
+</html>
