@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic-Tac-Toe Game</title>
+  <link rel="stylesheet" href="CSS/style.css">
+  <style>
+    body{
+      background-color: rgb(255, 251, 246);
+    }
+    header{
+      background-color: rgb(15, 36, 94);
+      color: rgb(232, 232, 232);
+      padding: 15px 2px;
+    }
+    header h1{
+      margin: 15px 10px;
+    }
+
+    main{
+      display: flex;
+      justify-content: center;
+      margin: 60px 10px;
+    }
+    .input-area, .board-area, .result-area{
+      width: 33%;
+      margin: 2px 2px;
+      border-radius: 8%;
+    }
+    .input-area input, .board-area input, .result-area input{
+      width: 30%;
+      /* height: 0.1%; */
+      font-size: 20px;
+      background-color: inherit;
+      border: none;
+      border-bottom: 2px solid black;
+      text-align: center;
+    }
+    .input-area{
+      padding: 10% 2px;
+      background-color: rgb(236, 216, 146);
+    }
+    .board-area{
+      background-color: rgb(226, 242, 255);
+    }
+    .result-area{
+      background-color: rgb(250, 214, 171);
+    }
+    .round-number, .player-1, .player-2{
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 2px;
+    }
+    .round-number{
+      margin-bottom: 60px;
+    }
+
+    .player-names{
+      display: flex;
+      flex-direction: column;
+      margin: 30px 10px;
+    }
+    .player-names p{
+      margin: 10px 10px;
+      font-size: 25px;
+
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Tic-Tac-Toe Game</h1>
+
+  </header>
+  <main>
+    <div class="input-area">
+      <div class="round-number">
+        <label for="numRounds">Number of rounds : </label>
+        <input type="number" id="numRounds" required>
+      </div>
+      <div class="player-1">
+        <label for="player1">Player-1 Name : </label>
+        <input type="text" id="player1">
+      </div>
+      <div class="player-2">
+        <label for="player2"> Player-2 Name : </label>
+        <input type="text" id="player2">
+      </div>
+    </div>
+    <div class="board-area">
+      <div class="player-names">
+        <p>Player-1: </p>
+        <p>Player-2: </p>
+      </div>
+    </div>
+    <div class="result-area">
+      <p>Result</p>
+    </div>
+  </main>
+</body>
+</html>
