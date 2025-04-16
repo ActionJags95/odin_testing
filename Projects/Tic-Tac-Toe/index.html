@@ -28,7 +28,7 @@
       margin: 2px 2px;
       border-radius: 8%;
     }
-    .input-area input, .board-area input, .result-area input{
+    .input-area input{
       width: 30%;
       /* height: 0.1%; */
       font-size: 20px;
@@ -43,9 +43,15 @@
     }
     .board-area{
       background-color: rgb(226, 242, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .result-area{
       background-color: rgb(250, 214, 171);
+    }
+    .input-area input:focus{
+      outline: none;
     }
     .round-number, .player-1, .player-2{
       font-size: 25px;
@@ -62,11 +68,29 @@
       display: flex;
       flex-direction: column;
       margin: 30px 10px;
+      width: 100%;
     }
     .player-names p{
       margin: 10px 10px;
       font-size: 25px;
 
+    }
+    .tic-tac-toe{
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      margin: 10px;
+      /* border: 2px solid red; */
+    }
+    .tic-tac-toe table {
+      margin-bottom: 30px;
+    }
+    .tic-tac-toe td {
+      border: 3px solid black;
+      border-radius: 10px;
+      height: 100px;
+      width: 100px;
+      font-size: 80px;
     }
 
   </style>
@@ -95,6 +119,25 @@
       <div class="player-names">
         <p>Player-1: </p>
         <p>Player-2: </p>
+      </div>
+      <div class="tic-tac-toe">
+        <table>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </table>
       </div>
     </div>
     <div class="result-area">
