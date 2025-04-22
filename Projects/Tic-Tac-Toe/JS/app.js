@@ -98,3 +98,54 @@ function BoardController(player1Name = "Player-1", player2Name = "Player-2") {
 
 BoardController();
 // TODO: Finalize the flow of the operations for this project
+
+function GetData() {
+  const roundNumIn = document.querySelector('#numRounds');
+  const player1In = document.querySelector('#player1');
+  const player2In = document.querySelector('#player2');
+
+  const numRounds = roundNumIn.value;
+  const player1 = player1In.value;
+  const player2 = player2In.value;
+
+  roundNumIn.value = '';
+  player1In.value = '';
+  player2In.value = '';
+  data = {numRounds, player1, player2};
+
+  return data;
+}
+
+function ScreenController() {
+  let data;
+  const submitBtn = document.querySelector('#submit');
+  submitBtn.addEventListener('click', () => {
+    data = GetData();
+    console.log(data);
+  })
+  const {numRounds, player1, player2} = data;
+  
+
+  
+}
+
+
+
+const board = document.querySelector('#board');
+// console.log(board);
+board.addEventListener('click', () => {
+  targetRow = event.target.closest('tr');
+  targetCol = event.target.closest('td');
+
+  const rows = Array.from(board.rows);
+  let rowIndex = rows.indexOf(targetRow);
+
+  console.log(rowIndex);
+  
+  console.log(rows[rowIndex].cells);
+
+  const colIndex = Array.from(rows[rowIndex].cells).indexOf(targetCol);
+  console.log(colIndex);
+
+  // console.log(rowIndex, colIndex);
+})
