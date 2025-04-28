@@ -7,7 +7,6 @@ function Cell(playerVal) {
   const getCellValue = () => value;
 
   return {markCellValue, getCellValue}
-}
 
 function GameBoard() {
   const numRows = 3;
@@ -96,8 +95,17 @@ function BoardController(player1Name = "Player-1", player2Name = "Player-2") {
   
 }
 
-BoardController();
+// BoardController();
 // TODO: Finalize the flow of the operations for this project
+
+
+function ScreenController(data) {
+  const {numRounds, player1, player2} = data;
+  
+  
+  console.log(data);
+  
+}
 
 function GetData() {
   const roundNumIn = document.querySelector('#numRounds');
@@ -116,20 +124,17 @@ function GetData() {
   return data;
 }
 
-function ScreenController() {
-  let data;
-  const submitBtn = document.querySelector('#submit');
-  submitBtn.addEventListener('click', () => {
-    data = GetData();
-    console.log(data);
-  })
-  const {numRounds, player1, player2} = data;
+// Gets Submit button
+const submitBtn = document.querySelector('#submit');
+
+// Game start when user clicks on submit button.
+submitBtn.addEventListener('click', () => {
+  let data = null;
+  data = GetData();
   
-
-  
-}
-
-
+  // Feed ScreenController with data obtained from DOM.
+  ScreenController(data);
+})
 
 const board = document.querySelector('#board');
 // console.log(board);
