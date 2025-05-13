@@ -7,6 +7,7 @@ function Cell(playerVal) {
   const getCellValue = () => value;
 
   return {markCellValue, getCellValue}
+}
 
 function GameBoard() {
   const numRows = 3;

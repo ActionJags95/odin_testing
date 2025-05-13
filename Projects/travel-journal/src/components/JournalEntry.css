@@ -1,0 +1,66 @@
+.journal-card {
+  display: flex;
+  margin: 20px 20px;
+  padding: 5px;
+}
+
+.image-cont{
+  position: relative;
+  width: 25%;
+}
+  
+.image-cont img{
+  border-radius: 5px;
+  width: 100%;
+
+}
+
+
+.text-cont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  padding: 10px;
+}
+
+.title{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+.title > span > h1{
+  margin: 0;
+  margin-left: 10px;
+}
+.title > span > p {
+  margin: 10px 10px;
+}
+.title > span > p > a{
+  color: grey;
+}
+.title > span > p > img{
+  width: 13px;
+}
+
+
+.location{
+  /* border: 2px solid red; */
+  display: flex;
+  width: 100%;
+}
+
+.info{
+  position: relative;
+  height: 100%;
+  width:100%;
+}
+
+#date{
+  font-weight: 600;
+}
+#date, #desc{
+  margin: 10px 10px;
+}
