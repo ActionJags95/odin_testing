@@ -1,5 +1,6 @@
 import Header from './components/Header'
 import JournalEntry from './components/JournalEntry'
+import Contact from './components/Contact'
 
 function App() {
   let mountFuji = {
@@ -10,11 +11,14 @@ function App() {
     country:"Japan",
     location: "Mount Fuji"
   }
+  let number = 2;
   return (
     <>
       <Header />
-      <JournalEntry location={mountFuji}/>
-      <JournalEntry location={mountFuji}/>
+      <JournalEntry loc={mountFuji}/>
+      <JournalEntry loc={mountFuji} number={number}/>
+      <Contact />
+      <Contact />
     </>
   )
 }

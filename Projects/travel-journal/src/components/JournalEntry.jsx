@@ -1,10 +1,14 @@
 import './JournalEntry.css'
 
-function JournalEntry(props) {
+function JournalEntry(props) { // all the parameters passed as attributes to component tags are the members of the props object
+  // For example: if the tag is <JournalEntry name={} place={}>
+  // props object consists of name and place as props.name and props.place
 
-  let {src, info, date, maplink, country, location} = props.location;
-  console.log(props);
+  let {src, info, date, maplink, country, location} = props.loc;
+  console.log(props); // Gets the overall props object, containing the all the attribute values
+  console.log(props.location); // Gets one of the attributes of the props object
   // console.log(src);
+  console.log(props.number);
 
   return (
     <>
