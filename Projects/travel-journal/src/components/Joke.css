@@ -1,0 +1,18 @@
+.joke-body{
+  margin: 30px 10px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 10px 1px #b3b3b3;
+}
+
+.joke-setup{
+  margin: 5px;
+  font-size: 20px;
+}
+
+.joke-punchline{
+  margin: 5px;
+  margin-top: 10px;
+  font-size: 17px;
+}

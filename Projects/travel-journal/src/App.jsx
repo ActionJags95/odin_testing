@@ -1,6 +1,8 @@
 import Header from './components/Header'
 import JournalEntry from './components/JournalEntry'
 import Contact from './components/Contact'
+import Array from './components/Arrays'
+import Render from './components/Render'
 
 function App() {
   let mountFuji = {
@@ -19,6 +21,8 @@ function App() {
       <JournalEntry loc={mountFuji} number={number}/>
       <Contact />
       <Contact />
+      <Array />
+      <Render />
     </>
   )
 }
