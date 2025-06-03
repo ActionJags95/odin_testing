@@ -1,0 +1,99 @@
+body{
+  margin: 0;
+  padding: 0;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  width: inherit;
+}
+
+.carousel{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1000px;
+}
+
+.my-slide{
+  width: inherit;
+  display: none;
+}
+.my-slide img{
+  border-radius: 25px;
+}
+
+.text{
+  position: relative;
+  top: -50px;
+  left: 30px;
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.400);
+}
+.numbertext{
+  position: relative;
+  top: 40px;
+  left: 10px;
+  color: rgba(255, 255, 255, 0.685);
+  text-align: left;
+  background-color: rgba(0, 0, 0, 0.108);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 55px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+
+.button-area{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px;
+  gap: 10px;
+  height: 25px;
+  width: 70px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  position: relative;
+  top: -12%;
+}
+.buttons{
+  width: 10px;
+  height: 10px;
+  background-color: rgba(187, 187, 187, 0.5);
+  border-radius: 10px;
+}
+.active{
+  background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.sliders{
+  position: relative;
+  top: -55%;
+  width: inherit;
+  display: flex;
+  justify-content: space-between;
+}
+.left, .right{
+  font-family: monospace;
+  font-size: 30px;
+  text-decoration: none;
+  color: #fffefe95;
+  margin: 2px 15px;
+  cursor: pointer;
+}
+
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: 0.4}
+  to {opacity: 1}
+}
