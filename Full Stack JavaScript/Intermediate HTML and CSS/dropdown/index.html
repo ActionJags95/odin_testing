@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .dropdown{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      /* width: 200px; */
+    }
+    .drop-btn{
+      width: 140px;
+      height: 40px;
+      border: none;
+      font-size: 20px;
+      margin: 5px;
+      border-radius: 10px;
+    }
+    .dropdown:hover .dropdown-content{
+      display: inline-flex;
+    }
+    .dropdown-content{
+      width: 140px;
+      text-align: center;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      background-color: antiquewhite;
+      padding: 10px;
+      border-radius: 10px;
+    }
+    .dropdown-content a{
+      text-decoration: none;
+      color: black;
+      font-size: 20px;
+      margin: 5px;
+    }
+    .dropdown-content a:hover{
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="dropdown">
+    <button class="drop-btn">Button</button>
+    <div class="dropdown-content">
+      <a href="">Link 1</a>
+      <a href="">Link 2</a>
+      <a href="">Link 3</a>
+    </div>
+  </div>
+</body>
+</html>

@@ -5,6 +5,7 @@ let numImages = slides.length;
 
 function displaySlide(slideNumber) {
   let i = 0;
+  slideNumber = slideNumber % numImages;
 
   for(i=0;i<slides.length;i++) {
     slides[i].style.display = "none";
@@ -25,4 +26,9 @@ function changeSlide(num) {
 function gotoSlide(id) {
   displaySlide(id-1);
 }
+
+setInterval(() => {
+  changeSlide(1);
+}, 5000);
+
 displaySlide(slideNumber);
