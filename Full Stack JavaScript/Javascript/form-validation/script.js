@@ -4,6 +4,6 @@ email.addEventListener("input", () => {
   if(email.validity.typeMismatch) {
     email.setCustomValidity("I am expecting an email address!");
   } else {
-    email.setCustomValidity("");
+    email.setCustomValidity("Hello");
   }
 })
