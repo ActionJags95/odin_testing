@@ -8,3 +8,8 @@ function two() {
 }
 
 one(two);
+
+
+one(() => {
+  console.log("two");
+})
