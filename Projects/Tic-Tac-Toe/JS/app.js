@@ -54,13 +54,16 @@ function GameBoard() {
 function Player(name, val) {
   const playerName = name;
   const playerVal = val;
-  const score = 0;
+  let score = 0;
 
   const getScore = () => score;
-  const incScore = () => {score++;}
+  const incScore = () => {
+    score++;
+  };
 
-  return {playerName, playerVal, getScore, incScore};
+  return { playerName, playerVal, getScore, incScore };
 }
+
 
 function BoardController(player1Name = "Player-1", player2Name = "Player-2") {
   const player1 = Player(player1Name, "X");
