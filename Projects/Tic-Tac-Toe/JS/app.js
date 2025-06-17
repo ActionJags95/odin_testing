@@ -164,11 +164,32 @@ function BoardController(player1Name, player2Name, numRounds) {
 }
 
 function ScreenController(data) {
-  const {numRounds, player1, player2} = data;
-  
-  
+  const { numRounds, player1, player2 } = data;
   console.log(data);
+
+  document.getElementById("name-1").textContent += player1;
+  document.getElementById("name-2").textContent += player2;
+
+  // Initializing the board with the players and their values
+  const boardcontroller = BoardController(player1, player2);
+
+  document.getElementById("score-1").textContent = `${boardcontroller.player1.playerName}: ${boardcontroller.player1.getScore()}`
+  document.getElementById("score-2").textContent = `${boardcontroller.player2.playerName}: ${boardcontroller.player2.getScore()}`
   
+  const board = document.querySelector("#board");
+  board.addEventListener("click", (event) => {
+    let currentPlayer = boardcontroller.getCurrPlayer();
+    const { rowIndex, colIndex } = getBoardCords(event);
+    
+    const boardRow = Array.from(board.rows).at(rowIndex);
+    const boardElem = Array.from(boardRow.cells).at(colIndex);
+    boardElem.textContent = currentPlayer.playerVal;
+    
+    boardcontroller.roundFn(rowIndex, colIndex);
+
+    document.getElementById("score-1").textContent = `${boardcontroller.player1.playerName}: ${boardcontroller.player1.getScore()}`
+    document.getElementById("score-2").textContent = `${boardcontroller.player2.playerName}: ${boardcontroller.player2.getScore()}`
+  });
 }
 
 function GetData() {
