@@ -1,13 +1,14 @@
-function Cell(playerVal) {
+function Cell() {
   let value = "";
 
-  const markCellValue = () => {
+  const markCellValue = (playerVal) => {
     value = playerVal;
-  }
+  };
   const getCellValue = () => value;
 
-  return {markCellValue, getCellValue}
+  return { markCellValue, getCellValue };
 }
+
 
 function GameBoard() {
   const numRows = 3;
