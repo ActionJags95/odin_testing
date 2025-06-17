@@ -74,6 +74,8 @@
 
     .result-area{
       background-color: rgb(250, 214, 171);
+      box-sizing: border-box;
+      padding: 50px;
     }
 
     .round-number, .player-1, .player-2{
@@ -115,7 +117,18 @@
       width: 100px;
       font-size: 80px;
     }
-
+    .result-area h1 {
+      margin: 0;
+      margin-top: 10px;
+      padding: 0;
+      font-size: 60px;
+    }
+    .scores{
+      font-size: 30px;
+      margin-top: 20px;
+      box-sizing: border-box;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -167,7 +180,11 @@
       </div>
     </div>
     <div class="result-area">
-      <p>Result</p>
+      <h1>Result</h1>
+      <div class="scores">
+        <p id="score-1"></p>
+        <p id="score-2"></p>
+      </div>
     </div>
   </main>
 </body>
