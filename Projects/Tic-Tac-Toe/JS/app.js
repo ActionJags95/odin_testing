@@ -65,14 +65,20 @@ function Player(name, val) {
 }
 
 
-function BoardController(player1Name = "Player-1", player2Name = "Player-2") {
+function BoardController(player1Name, player2Name, numRounds) {
   const player1 = Player(player1Name, "X");
   const player2 = Player(player2Name, "O");
 
-  const round = 0;
-  let moves = 0;
-  const incRound = () => {round++;}
+  let round = 1;
+  let moves = 1;
+  const incRound = () => {
+    round++;
+  };
+  const incMoves = () => {
+    moves++;
+  };
   const getRound = () => round;
+  const getMoves = () => moves;
 
   const board = GameBoard();
 
@@ -83,26 +89,79 @@ function BoardController(player1Name = "Player-1", player2Name = "Player-2") {
   const getCurrPlayer = () => currentPlayer;
 
   const changeTurn = () => {
-    currentPlayer = (currentPlayer === player1) ? player2 : player1;
-  }
+    currentPlayer = currentPlayer === player1 ? player2 : player1;
+  };
 
-  // TODO: Finalize all the functions, parameters and their flow 
+  // TODO: Finalize all the functions, parameters and their flow
   const checkBoard = (row, col) => {
-    
-    // Row checking
-    for(let i=0;i<row;i++) {
-      for(let j=0;j<col;j++) {
-        if(boardMatrix[i][j] != currentPlayer.playerVal()) break;
+    const boardArea = board.printBoard();
+
+    // Checking rows
+    const checkRows = () => {
+      for (let j = 0; j < 3; j++) {
+        if (boardArea[row][j] != currentPlayer.playerVal) return false;
       }
-      
+
+      return true;
+    };
+
+    // Checking columns
+    const checkCols = () => {
+      for (let i = 0; i < 3; i++) {
+        if (boardArea[i][col] != currentPlayer.playerVal) return false;
+      }
+
+      return true;
+    };
+
+    const checkDiags1 = () => {
+      let i = 0,
+        j = 0;
+      while (i < 3 && j < 3) {
+        if (boardArea[i][j] != currentPlayer.playerVal) return false;
+        i++;
+        j++;
+      }
+
+      return true;
+    };
+
+    const checkDiags2 = () => {
+      let i = 2;
+      j = 0;
+      while (i >= 0 && j < 3) {
+        if (boardArea[i][j] != currentPlayer.playerVal) return false;
+        i--;
+        j++;
+      }
+
+      return true;
+    };
+    return checkRows() || checkCols() || checkDiags1() || checkDiags2();
+  };
+
+  const roundFn = (row, col) => {
+    const status = board.markBoard(currentPlayer.playerVal, row, col);
+    if (status) {
+      if (checkBoard(row, col)) {
+        currentPlayer.incScore();
+        console.log(currentPlayer.getScore());
+        alert(`${currentPlayer.playerName} has won Round-${getRound()}`);
+      } else {
+        if (getMoves() == 9) alert("Draw Round");
+      }
+
+      incMoves();
+      changeTurn();
+    } else {
+      alert("Already marked this cell, mark other cell");
     }
-  }
-  
+
+    // console.log(board.printBoard());
+  };
+
+  return { getWinner, getCurrPlayer, roundFn , player1, player2 };
 }
-
-// BoardController();
-// TODO: Finalize the flow of the operations for this project
-
 
 function ScreenController(data) {
   const {numRounds, player1, player2} = data;
