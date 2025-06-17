@@ -14,40 +14,40 @@ function GameBoard() {
   const numRows = 3;
   const numCols = 3;
 
-  const board = []
-  for(let i=0;i<numRows;i++) {
+  const board = [];
+  for (let i = 0; i < numRows; i++) {
     board[i] = [];
-    for(let j=0;j<numCols;j++) {
+    for (let j = 0; j < numCols; j++) {
       board[i].push(Cell());
     }
   }
 
   const markBoard = (playerVal, row, col) => {
-    if(!board[row][col].getCellValue()) {
+    if (!board[row][col].getCellValue()) {
       board[row][col].markCellValue(playerVal);
       return true;
-    } else{
+    } else {
       return false;
     }
-  }
+  };
 
   const printBoard = () => {
-    let boardMatrix = []
+    let boardMatrix = [];
 
-    for(let i=0;i<numRows;i++) {
-      boardMatrix[i] = []
-      for(let j=0;j<numCols;j++) {
+    for (let i = 0; i < numRows; i++) {
+      boardMatrix[i] = [];
+      for (let j = 0; j < numCols; j++) {
         boardMatrix[i].push(board[i][j].getCellValue());
       }
     }
     return boardMatrix;
-  }
+  };
 
   const getBoard = () => board;
   const getRows = () => numRows;
   const getCols = () => numCols;
 
-  return {markBoard, printBoard, getBoard, getRows, getCols};
+  return { markBoard, printBoard, getBoard, getRows, getCols };
 }
 
 
