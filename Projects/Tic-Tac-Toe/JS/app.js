@@ -208,6 +208,21 @@ function GetData() {
 
   return data;
 }
+
+
+function getBoardCords(event) {
+  let targetRow = event.target.closest("tr");
+  let targetCol = event.target.closest("td");
+
+  // Getting the row number
+  const rows = Array.from(board.rows);
+  const rowIndex = rows.indexOf(targetRow);
+
+  //Getting the column number
+  const colIndex = Array.from(rows[rowIndex].cells).indexOf(targetCol);
+
+  return { rowIndex, colIndex };
+}
 // Gets Submit button
 const submitBtn = document.querySelector('#submit');
 
