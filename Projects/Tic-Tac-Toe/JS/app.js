@@ -223,33 +223,16 @@ function getBoardCords(event) {
 
   return { rowIndex, colIndex };
 }
+
+
 // Gets Submit button
-const submitBtn = document.querySelector('#submit');
+const submitBtn = document.querySelector("#submit");
 
 // Game start when user clicks on submit button.
-submitBtn.addEventListener('click', () => {
+submitBtn.addEventListener("click", () => {
   let data = null;
   data = GetData();
-  
+
   // Feed ScreenController with data obtained from DOM.
   ScreenController(data);
-})
-
-const board = document.querySelector('#board');
-// console.log(board);
-board.addEventListener('click', () => {
-  targetRow = event.target.closest('tr');
-  targetCol = event.target.closest('td');
-
-  const rows = Array.from(board.rows);
-  let rowIndex = rows.indexOf(targetRow);
-
-  console.log(rowIndex);
-  
-  console.log(rows[rowIndex].cells);
-
-  const colIndex = Array.from(rows[rowIndex].cells).indexOf(targetCol);
-  console.log(colIndex);
-
-  // console.log(rowIndex, colIndex);
-})
+});
