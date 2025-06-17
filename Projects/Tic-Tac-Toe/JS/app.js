@@ -193,22 +193,21 @@ function ScreenController(data) {
 }
 
 function GetData() {
-  const roundNumIn = document.querySelector('#numRounds');
-  const player1In = document.querySelector('#player1');
-  const player2In = document.querySelector('#player2');
+  const roundNumIn = document.querySelector("#numRounds");
+  const player1In = document.querySelector("#player1");
+  const player2In = document.querySelector("#player2");
 
   const numRounds = roundNumIn.value;
   const player1 = player1In.value;
   const player2 = player2In.value;
 
-  roundNumIn.value = '';
-  player1In.value = '';
-  player2In.value = '';
-  data = {numRounds, player1, player2};
+  roundNumIn.value = "";
+  player1In.value = "";
+  player2In.value = "";
+  data = { numRounds, player1, player2 };
 
   return data;
 }
-
 // Gets Submit button
 const submitBtn = document.querySelector('#submit');
 
