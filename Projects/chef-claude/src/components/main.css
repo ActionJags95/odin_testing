@@ -6,7 +6,8 @@
   margin: 40px;
 }
 
-.add-ingredient-form>input, button {
+.add-ingredient-form>input,
+button {
   font-family: inherit;
   font-size: 20px;
   padding: 10px 20px;
@@ -15,7 +16,13 @@
   box-shadow: 0px 0px 5px 1px #7b7b7b47;
 }
 
-.add-ingredient-form > button {
+.add-ingredient-form>input {
+  flex-grow: 1;
+  min-width: 150px;
+  max-width: 500px;
+}
+
+.add-ingredient-form>button {
   background-color: black;
   color: white;
 }
