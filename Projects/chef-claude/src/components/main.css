@@ -1,0 +1,21 @@
+.add-ingredient-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin: 40px;
+}
+
+.add-ingredient-form>input, button {
+  font-family: inherit;
+  font-size: 20px;
+  padding: 10px 20px;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 0px 0px 5px 1px #7b7b7b47;
+}
+
+.add-ingredient-form > button {
+  background-color: black;
+  color: white;
+}
