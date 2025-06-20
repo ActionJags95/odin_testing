@@ -25,4 +25,9 @@ button {
 .add-ingredient-form>button {
   background-color: black;
   color: white;
+  width: 200px;
+}
+.add-ingredient-form>button:before {
+  content: "+";
+  margin-right: 5px;
 }
