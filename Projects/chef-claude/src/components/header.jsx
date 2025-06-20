@@ -1,4 +1,4 @@
-import './header.css'
+import "./header.css";
 
 function Header() {
   return (
@@ -9,7 +9,7 @@ function Header() {
         <h3></h3>
       </header>
     </>
-  )
+  );
 }
 
 export default Header;
