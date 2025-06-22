@@ -31,3 +31,13 @@ button {
   content: "+";
   margin-right: 5px;
 }
+
+main>ul {
+  font-size: 20px;
+  margin: 30px 20px;
+}
+
+main>ul>li {
+  margin: 10px;
+  list-style-type: decimal-leading-zero;
+}

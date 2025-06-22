@@ -1,7 +1,7 @@
 import "./main.css";
 
 function Main() {
-  let items = ["Chicken"];
+  let items = ["Chicken", "Parmesan", "Oregano"];
 
   let itemList = items.map((item, index) => {
     return <li id={index}>{item}</li>
