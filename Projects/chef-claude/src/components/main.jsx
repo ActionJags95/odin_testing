@@ -19,7 +19,10 @@ function Main() {
 
     // Updating the state element (itemList)
     setList((prevItems) => {
-      return [...prevItems, item];
+      return [...prevItems, item]; 
+      // Callback gives the previous value of the state before the form submission, as the variable name suggests
+      // ... is the spread operator. Using array destructuring property, we are returning the new array with new element
+      // In react, the state variable should not be modified directly, rather should be done through callbacks and return values
     });
   }
 
