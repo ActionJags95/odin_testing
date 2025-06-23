@@ -1,26 +1,32 @@
+import { useState } from "react";
 import "./main.css";
 
 function Main() {
-  let items = ["Chicken", "Parmesan", "Oregano"];
+  let [items, setList] = useState([]);
 
-  let itemList = items.map((item, index) => {
-    return <li id={index}>{item}</li>
-  });
+  function addToLIst(event) {
+    event.preventDefault(); // Preventing reload on submit
 
-  function printList(event) {
-    event.preventDefault();
+    // Getting the value from the input element
+    const listInput = document.querySelector("#list-item");
+    const item = listInput.value;
+    listInput.value = "";
+    // Validity checking
+    if(item == "") {
+      alert("Enter a valid item name");
+      return;
+    }
 
-    const formData = new FormData(event.currentTarget);
-    const ingredient = formData.get("ingredient");
-    // console.log(ingredient);
-    items.push(ingredient);
-    console.log(itemList);
+    // Updating the state element (itemList)
+    setList((prevItems) => {
+      return [...prevItems, item];
+    });
   }
 
   return (
     <>
       <main>
-        <form className="add-ingredient-form" onSubmit={printList}>
+        <form className="add-ingredient-form" onSubmit={addToLIst}>
           <input
             id="list-item"
             type="text"
@@ -33,7 +39,10 @@ function Main() {
           </button>
         </form>
         <ul>
-          {itemList}
+          {/* Rendering the items array to a HTML list */}
+          {items.map((item, index) => {
+            return <li key={index}>{item}</li>;
+          })}
         </ul>
       </main>
     </>
