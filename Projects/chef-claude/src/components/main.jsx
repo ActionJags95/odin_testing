@@ -42,12 +42,15 @@ function Main() {
           </button>
         </form>
         {items.length > 0 && ( // Conditional rendering 
+         <>
+          <h1>Ingredients on Hand</h1>
           <ul>
             {/* Rendering the items array to a HTML list */}
             {items.map((item, index) => {
               return <li key={index}>{item}</li>;
             })}
           </ul>
+         </>
         )}
       </main>
     </>
