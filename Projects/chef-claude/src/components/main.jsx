@@ -12,14 +12,14 @@ function Main() {
     const item = listInput.value;
     listInput.value = "";
     // Validity checking
-    if(item == "") {
+    if (item == "") {
       alert("Enter a valid item name");
       return;
     }
 
     // Updating the state element (itemList)
     setList((prevItems) => {
-      return [...prevItems, item]; 
+      return [...prevItems, item];
       // Callback gives the previous value of the state before the form submission, as the variable name suggests
       // ... is the spread operator. Using array destructuring property, we are returning the new array with new element
       // In react, the state variable should not be modified directly, rather should be done through callbacks and return values
@@ -41,12 +41,14 @@ function Main() {
             Add ingredient
           </button>
         </form>
-        <ul>
-          {/* Rendering the items array to a HTML list */}
-          {items.map((item, index) => {
-            return <li key={index}>{item}</li>;
-          })}
-        </ul>
+        {items.length > 0 && ( // Conditional rendering 
+          <ul>
+            {/* Rendering the items array to a HTML list */}
+            {items.map((item, index) => {
+              return <li key={index}>{item}</li>;
+            })}
+          </ul>
+        )}
       </main>
     </>
   );
