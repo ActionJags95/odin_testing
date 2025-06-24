@@ -27,6 +27,10 @@ button {
   color: white;
   width: 200px;
 }
+.add-ingredient-form>button:focus {
+  background-color: rgb(90, 90, 90);
+  outline: none ;
+}
 .add-ingredient-form>button:before {
   content: "+";
   margin-right: 5px;
