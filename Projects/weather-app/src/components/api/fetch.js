@@ -1,5 +1,12 @@
+import Loader from "../dom/loading";
+
 async function getResponse(location) {
   if(location) {
+    // Load the loader
+    const loader = Loader();
+
+    // set loading start
+    loader.toggleOn();
     location = location.toLowerCase();
     console.log(location);
     const apiKey = process.env.API_KEY;
@@ -11,6 +18,8 @@ async function getResponse(location) {
     );
     const data = await rawData.json();
     console.log(data);
+    // set loading end
+    loader.toggleOff();
     return data;
   }
 }
