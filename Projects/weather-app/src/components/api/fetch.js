@@ -1,5 +1,7 @@
 async function getResponse(location) {
   if(location) {
+    location = location.toLowerCase();
+    console.log(location);
     const apiKey = process.env.API_KEY;
     const rawData = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`,
