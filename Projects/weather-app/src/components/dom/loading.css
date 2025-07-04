@@ -1,0 +1,31 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(50, 50, 50, 0.5);
+  backdrop-filter: blur(10px);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loadAnim { 
+  width: 50px;
+  height: 50px;
+  background-color: transparent;
+  border: 4px solid rgba(200, 200, 200, 0.5);
+  border-left-color: #3f3f3f94;
+  animation: rotate 1s linear infinite;
+  border-radius: 50%;
+  /* margin: auto auto; */
+  z-index: 9999;
+}
+@keyframes rotate {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
