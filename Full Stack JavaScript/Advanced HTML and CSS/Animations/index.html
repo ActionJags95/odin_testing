@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 700px;
+      height: auto;
+    }
+
+    img:hover {
+      transform: translate(100px, 100px) rotate(10deg);
+    }
+
+    p:hover {
+      transform: rotate(180deg);
+    }
+
+    .box {
+      width: 500px;
+      height: 300px;
+      border: 2px solid red;
+      position: relative;
+    }
+
+    .sub-box {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      border: 2px solid red;
+      transform: translateY(-100%);
+      top: 0px;
+      right: 0px;
+    }
+
+    .card {
+      width: 500px;
+      height: 300px;
+      box-shadow: 0px 0px 10px 1px #b3b3b3;
+      margin: 50px;
+      border-radius: 20px;
+      background-color: antiquewhite;
+      animation: alternate 2s ripple infinite;
+    }
+
+    @keyframes ripple {
+      from {
+        transform: scale(0.5);
+        background-color: antiquewhite;
+      }
+
+      to {
+        transform: scale(1.5);
+        background-color: red;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <p tabindex="-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Totam officia quam accusantium doloremque
+    illum. Ab quia
+    officiis ratione at molestias, quidem blanditiis maiores expedita, praesentium quibusdam, nostrum et voluptates
+    libero dolorum similique incidunt iure id error! Quam, velit iusto qui amet rem molestias iure distinctio.</p>
+  <img tabindex="0"
+    src="https://www.bmw-m.com/content/dam/bmw/marketBMW_M/www_bmw-m_com/fastlane/motorsport/2024/wallpaper-motorsport/Wallpaper_M4GT4_Front_Right_4K.jpg?imwidth=1920"
+    alt="BMW M4 GT4 Evo">
+
+  <div class="box" tabindex="0">
+    <div class="sub-box" tabindex="0">
+
+    </div>
+  </div>
+
+  <div class="card" tabindex="0">
+
+  </div>
+</body>
+
+</html>

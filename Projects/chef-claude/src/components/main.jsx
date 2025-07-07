@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ResponseContent from "./responseContent";
 import "./main.css";
 
 function Main() {
@@ -55,10 +56,11 @@ function Main() {
               <h3>Ready for a recipe?</h3>
               <p>Generate a recipe from your list of ingredients</p>
             </div>
-            <button>Get a recipe</button>
+            <button id="get-recipe">Get a recipe</button>
           </div>
          </section>
         )}
+        <ResponseContent items={items}/>
       </main>
     </>
   );

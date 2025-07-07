@@ -6,8 +6,7 @@
   margin: 40px;
 }
 
-.add-ingredient-form>input,
-button {
+.add-ingredient-form>input, .add-ingredient-form>button {
   font-family: inherit;
   font-size: 20px;
   padding: 10px 20px;
@@ -26,6 +25,10 @@ button {
   background-color: black;
   color: white;
   width: 200px;
+}
+
+.add-ingredient-form>button:hover {
+  cursor: pointer;
 }
 
 .add-ingredient-form>button:focus {
@@ -83,10 +86,19 @@ section>ul>li {
   margin: 10px 10px;
   font-size: 17px;
 }
+
 .get-recipe-container>button {
-  background-color: rgb(232, 128, 60);
+  background-color: rgb(199, 106, 45);
   height: 45px;
   width: 150px;
   margin: 10px 20px;
   color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 7px;
+  box-shadow: 0px 0px 5px 1px #7b7b7b47;
+}
+
+.get-recipe-container>button:hover {
+  cursor: pointer;
 }
