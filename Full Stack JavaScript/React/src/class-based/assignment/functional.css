@@ -1,0 +1,6 @@
+.task-list {
+  list-style-type: disc inside;
+}
+.tasks {
+  display: flex;
+}
