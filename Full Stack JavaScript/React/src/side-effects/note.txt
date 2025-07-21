@@ -1,0 +1,2 @@
+Side-effect means interaction with the environment outside the react ecosystem
+Such as fetching data from a backend or an API, connecting to a server and fetching information, updating with the backend etc..
