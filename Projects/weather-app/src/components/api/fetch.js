@@ -1,37 +1,43 @@
 import Loader from "../dom/loading";
 
 async function getResponse(location) {
-  if(location) {
-    // Load the loader
-    const loader = Loader();
+  if (!location) {
+    console.warn("No location provided to getResponse()");
+    return undefined;
+  }
 
-    // set loading start
-    loader.toggleOn();
-    location = location.toLowerCase();
-    console.log(location);
-    const apiKey = process.env.API_KEY;
+  const loader = Loader();
+  loader.toggleOn();
+
+  location = location.toLowerCase();
+  const apiKey = process.env.API_KEY;
+  console.log(apiKey);
+
+  try {
     const rawData = await fetch(
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`,
       {
         mode: "cors",
       }
     );
+
+    if(!rawData.ok) {
+      throw new Error("Cannot get data from API, status: ",rawData.status);
+    }
+
     const data = await rawData.json();
-    console.log(data);
-    // set loading end
     loader.toggleOff();
+    document.getElementById("root").innerHTML = "";
+
     return data;
+
+  } catch (error) {
+    console.log("Unable to fetch data:", error);
+    loader.toggleOff();
+    return undefined;
+  } finally {
+    console.log("Finished execution of getResponse()");
   }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.querySelector("#locationForm");
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const formdata = new FormData(event.target); 
-    const location = formdata.get("location");
-    getResponse(location);
-  });
-});
 
 export default getResponse;
