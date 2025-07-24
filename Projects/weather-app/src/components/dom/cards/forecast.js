@@ -42,11 +42,20 @@ function ForeCast(props) {
   const tomorrow = new Date();
   tomorrow.setDate(today.getDate() + 1);
 
-  const todayStr = today.toISOString().slice(0, 10);
-  const tomorrowStr = tomorrow.toISOString().slice(0, 10);
+  const todayMonth = String(today.getMonth() + 1).padStart(2, "0");
+  const todayDate = String(today.getDate()).padStart(2, "0");
+  const tomorrowMonth = String(tomorrow.getMonth() + 1).padStart(2, "0");
+  const tomorrowDate = String(tomorrow.getDate()).padStart(2, "0");
 
-  const todayHourData = dailyData.find((day) => day.datetime == todayStr).hours.filter((hour) => hour.datetime.split(":").at(0) >= today.getHours() - 1);
-  const tomorrowHourData = dailyData.find((day) => day.datetime == tomorrowStr).hours.filter((hour) => hour.datetime.split(":").at(0) < today.getHours() - 1);
+  const todayStr = `${today.getFullYear()}-${todayMonth}-${todayDate}`;
+  const tomorrowStr = `${tomorrow.getFullYear()}-${tomorrowMonth}-${tomorrowDate}`;
+
+  const todayHourData = dailyData
+    .find((day) => day.datetime == todayStr)
+    .hours.filter((hour) => hour.datetime.split(":").at(0) >= today.getHours() - 1);
+  const tomorrowHourData = dailyData
+    .find((day) => day.datetime == tomorrowStr)
+    .hours.filter((hour) => hour.datetime.split(":").at(0) < today.getHours() - 1);
 
   const hourlyData = [...todayHourData, ...tomorrowHourData];
 
