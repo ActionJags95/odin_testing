@@ -27,15 +27,15 @@ async function getResponse(location) {
 
     const data = await rawData.json();
     loader.toggleOff();
-    document.getElementById("root").innerHTML = "";
-
+    
     return data;
-
+    
   } catch (error) {
     console.log("Unable to fetch data:", error);
     loader.toggleOff();
     return undefined;
   } finally {
+    document.getElementById("root").innerHTML = "";
     console.log("Finished execution of getResponse()");
   }
 }
