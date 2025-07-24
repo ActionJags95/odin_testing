@@ -1,5 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(149, 177, 252);
+  background-color: rgb(165, 181, 223);
+  font-family: "Roboto", sans-serif;
+}
+
+#root {
+  display: flex;
 }
