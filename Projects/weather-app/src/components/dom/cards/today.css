@@ -1,5 +1,5 @@
 .todayDiv {
-  height: 700px;
+  height: 800px;
   width: 40%;
   padding: 20px;
   display: flex;
@@ -8,13 +8,18 @@
   align-items: center;
 }
 
-.locationSection, .weatherSection {
+.locationSection {
   margin: 20px;
-  height: 45%;
+  height: 100%;
   width: 90%;
   border-radius: 20px;
   background-color: rgb(233 233 233 / 40%);
   box-shadow: 0px 0px 10px 1px #32323224;
+  padding: 10px 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .locationDiv {
@@ -26,7 +31,7 @@
 #locationName {
   margin: 0;
   padding: 0;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 600;
 }
 #markerIcon {
@@ -45,31 +50,44 @@
 #timezoneText {
   margin: 0;
   padding: 0;
+  font-size: 20px;
+}
+
+.tempStatDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px;
+  gap: 15px;
+}
+#weatherIcon {
+  height: 80px;
+}
+#tempText {
+  font-weight: bold;
+  font-size: 50px;
+  margin: 0;
+}
+
+#weatherDesc {
+  text-align: center;
+  margin: 0;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 
 .weatherDiv {
-  display: flex;
-  justify-content: left;
-  align-items: center;
-  margin: 20px;
+  background-color: #8faaef;
+  border-radius: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  width: 400px;
+  text-align: center;
+  margin: 40px 10px;
+  box-shadow: 0px 0px 10px 1px #32323224;
 }
-#weatherIcon {
-  height: 100px;
-  margin: 10px;
-  margin-right: 30px;
-}
-#tempDiv > p {
-  margin: 0;
-  margin: 5px 0px;
-  font-size: 20px;
-  font-weight: bold;
-}
-
-#weatherDescription {
-  margin: 50px 30px;
-  font-size: 23px;
-  color: rgb(70, 70, 70);
-  width: 500px;
-  display: flex;
+.weatherDiv > p {
+  margin: 15px 10px;
+  font-size: 25px;
 }

@@ -3,7 +3,8 @@ import markerIcon from "../../../assets/marker.svg";
 import timezoneIcon from "../../../assets/timezone.svg";
 
 function LocationDetails(props) {
-  const { latitude, longitude, resolvedAddress, timezone } = props;
+  const { latitude, longitude, resolvedAddress, timezone, todayWeather } =
+    props;
 
   // Location Name section
   const locationDiv = document.createElement("div");
@@ -35,11 +36,31 @@ function LocationDetails(props) {
   timezoneDiv.appendChild(timezoneImg);
   timezoneDiv.appendChild(timezoneText);
 
+  // Temp Stat
+  const weatherIcon = document.createElement("img");
+  weatherIcon.src = require(`../../../assets/weather-icons/${todayWeather.icon}.svg`);
+  weatherIcon.setAttribute("id", "weatherIcon");
+
+  const temp = document.createElement("p");
+  temp.setAttribute("id", "tempText");
+  temp.textContent = todayWeather.temp;
+
+  const tempStatDiv = document.createElement("div");
+  tempStatDiv.setAttribute("class", "tempStatDiv");
+  tempStatDiv.appendChild(weatherIcon);
+  tempStatDiv.appendChild(temp);
+
+  // Weather description
+  const weatherDesc = document.createElement("p");
+  weatherDesc.setAttribute("id", "weatherDesc");
+  weatherDesc.textContent = todayWeather.description;
+
   const locationSection = document.createElement("section");
   locationSection.setAttribute("class", "locationSection");
-
   locationSection.appendChild(locationDiv);
   locationSection.appendChild(timezoneDiv);
+  locationSection.appendChild(tempStatDiv);
+  locationSection.appendChild(weatherDesc);
 
   return locationSection;
 }
@@ -56,29 +77,16 @@ function WeatherDetails(props) {
   const weatherDiv = document.createElement("div");
   weatherDiv.setAttribute("class", "weatherDiv");
 
-  const weatherIcon = document.createElement("img");
-  weatherIcon.src = require(`../../../assets/weather-icons/${todayWeather.icon}.svg`);
-  weatherIcon.setAttribute("id", "weatherIcon");
-
-  const tempDiv = document.createElement("div");
-  tempDiv.setAttribute("id", "tempDiv");
-
-  tempDiv.innerHTML = `
-    <p>Temperature: ${todayWeather.temp}</p>
-    <p>Feels like: ${todayWeather.feelslike}</p>
+  weatherDiv.innerHTML = `
+    <p>Feels Like: ${todayWeather.feelslike}</p>
     <p>Max: ${todayWeather.tempmax}</p>
     <p>Min: ${todayWeather.tempmin}</p>
+    <p>Pressure: ${todayWeather.pressure}</p>
+    <p>Humidity: ${todayWeather.humidity}</p>
+    <p>UV Index: ${todayWeather.uvindex}</p>
   `;
 
-  weatherDiv.appendChild(weatherIcon);
-  weatherDiv.appendChild(tempDiv);
-
-  const weatherDescription = document.createElement("p");
-  weatherDescription.setAttribute("id", "weatherDescription");
-  weatherDescription.textContent = todayWeather.description;
-
   weatherSection.appendChild(weatherDiv);
-  weatherSection.appendChild(weatherDescription);
 
   return weatherSection;
 }
@@ -99,6 +107,7 @@ function Today(props) {
     longitude,
     resolvedAddress,
     timezone,
+    todayWeather,
   });
   const weatherElem = WeatherDetails({
     description,
@@ -106,10 +115,11 @@ function Today(props) {
     todayWeather,
   });
 
+  locationElem.appendChild(weatherElem);
+
   const todayDiv = document.createElement("div");
   todayDiv.setAttribute("class", "todayDiv");
   todayDiv.appendChild(locationElem);
-  todayDiv.appendChild(weatherElem);
 
   return todayDiv;
 }
