@@ -13,8 +13,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const formData = new FormData(event.target);
     const location = formData.get("location");
 
-    console.log(location);
-
     try {
       const weatherData = await getResponse(location);
       if (weatherData === undefined) {
