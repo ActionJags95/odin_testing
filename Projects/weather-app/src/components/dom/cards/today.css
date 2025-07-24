@@ -1,0 +1,76 @@
+.todayDiv {
+  border: 1px solid red;
+  height: 700px;
+  width: 40%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.locationSection, .weatherSection {
+  margin: 20px;
+  height: 45%;
+  width: 90%;
+  border-radius: 20px;
+  background-color: rgb(233 233 233 / 40%);
+  box-shadow: 0px 0px 10px 1px #32323224;
+}
+
+.locationDiv {
+  display: flex;
+  margin: 30px;
+  justify-content: center;
+  align-items: center;
+}
+#locationName {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+#markerIcon {
+  height: 30px;
+}
+
+.timezoneDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#timezoneIcon {
+  height: 20px;
+  margin: 5px;
+}
+#timezoneText {
+  margin: 0;
+  padding: 0;
+}
+
+
+.weatherDiv {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 20px;
+}
+#weatherIcon {
+  height: 100px;
+  margin: 10px;
+  margin-right: 30px;
+}
+#tempDiv > p {
+  margin: 0;
+  margin: 5px 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#weatherDescription {
+  margin: 50px 30px;
+  font-size: 23px;
+  color: rgb(70, 70, 70);
+  width: 500px;
+  display: flex;
+}
