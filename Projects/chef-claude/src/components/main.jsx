@@ -42,25 +42,25 @@ function Main() {
             Add ingredient
           </button>
         </form>
-        {items.length > 0 && ( // Conditional rendering 
-         <section>
-          <h1>Ingredients on Hand</h1>
-          <ul className="ingredients-list">
-            {/* Rendering the items array to a HTML list */}
-            {items.map((item, index) => {
-              return <li key={index}>{item}</li>;
-            })}
-          </ul>
-          <div className="get-recipe-container">
-            <div>
-              <h3>Ready for a recipe?</h3>
-              <p>Generate a recipe from your list of ingredients</p>
+        {items.length > 0 && ( // Conditional rendering
+          <section>
+            <h1>Ingredients on Hand</h1>
+            <ul className="ingredients-list">
+              {/* Rendering the items array to a HTML list */}
+              {items.map((item, index) => {
+                return <li key={index}>{item}</li>;
+              })}
+            </ul>
+            <div className="get-recipe-container">
+              <div>
+                <h3>Ready for a recipe?</h3>
+                <p>Generate a recipe from your list of ingredients</p>
+              </div>
+              <button id="get-recipe">Get a recipe</button>
             </div>
-            <button id="get-recipe">Get a recipe</button>
-          </div>
-         </section>
+          </section>
         )}
-        <ResponseContent items={items}/>
+        <ResponseContent items={items} />
       </main>
     </>
   );
