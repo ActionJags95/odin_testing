@@ -18,18 +18,17 @@ async function getResponse(location) {
       `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}?key=${apiKey}`,
       {
         mode: "cors",
-      }
+      },
     );
 
-    if(!rawData.ok) {
-      throw new Error("Cannot get data from API, status: ",rawData.status);
+    if (!rawData.ok) {
+      throw new Error("Cannot get data from API, status: ", rawData.status);
     }
 
     const data = await rawData.json();
     loader.toggleOff();
-    
+
     return data;
-    
   } catch (error) {
     console.log("Unable to fetch data:", error);
     loader.toggleOff();
