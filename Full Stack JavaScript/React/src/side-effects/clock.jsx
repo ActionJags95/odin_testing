@@ -5,12 +5,15 @@ function Clock() {
 
   useEffect(() => {
     // This hook takes the calculations outside the render environment
+
+    // Execution of the side effect
     const interval = setInterval(() => {
       updateCounter((prevCount) => prevCount + 1);
     }, 1000);
 
+    // Returning the cleanup of the side effect
     return () => clearInterval(interval);
-  }, []);
+  }, [/* Entities, running the useEffect when got changed */]);
 
   return <p>{counter} seconds have passed.</p>;
 }
