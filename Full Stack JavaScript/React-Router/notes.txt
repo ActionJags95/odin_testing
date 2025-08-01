@@ -1,0 +1,6 @@
+JavaScript takes over the duty of handling the routes of an application.
+Helps to maintain single page applications, without refreshing the pages as user navigates.
+
+In case of multi-page applications, the browsers always reloads the page as the user navigates to different pages, to load them.
+Whereas in case of single-page applications, everything is pre-loaded and when user wants to open a section, router switches the route without reloading the page.
+We never leave the page we are in, in single-page applications, and provides app-like interactions.
