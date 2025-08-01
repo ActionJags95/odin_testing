@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function App() {
   return (
     <>
@@ -7,7 +9,13 @@ function App() {
         <nav>
           <ul>
             <li>
-              <a href="profile">Profile page</a>
+              <Link to="profile">Profile</Link>
+            </li>
+            <li>
+              <Link to="hello">hello</Link>
+            </li>
+            <li>
+              <Link to="hi">hi</Link>
             </li>
           </ul>
         </nav>
