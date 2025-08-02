@@ -40,3 +40,5 @@ async function getResponse(location) {
 }
 
 export default getResponse;
+
+// NOTE: WOrk on the React fork of this project
