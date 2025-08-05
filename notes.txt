@@ -1,3 +1,4 @@
 1. Learn fetching methods in react
 2. Learn "axios" library for fetching data in react
 3. Learn more on try/catch blocks, promises and async functions
+4. Learn front-end security
