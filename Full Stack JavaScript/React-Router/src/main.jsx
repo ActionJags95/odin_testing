@@ -4,25 +4,17 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import "./index.css";
 import App from "./App.jsx";
 import Profile from "./components/profile.jsx";
-import Hello from "./components/hello.jsx";
-import Hi from "./components/hi.jsx";
+import ErrorPage from "./components/error-page.jsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
+    errorElement: <ErrorPage />,
   },
   {
-    path: "profile",
+    path: "profile/:name",
     element: <Profile />,
-  },
-  {
-    path: "hello",
-    element: <Hello />,
-  },
-  {
-    path: "hi",
-    element: <Hi />,
   },
 ]);
 
