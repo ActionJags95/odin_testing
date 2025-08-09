@@ -19,8 +19,10 @@ function EducationalDetails(props) {
       <form onSubmit={handleSubmit} className="education-details-form">
         <label htmlFor="institution">Enter the institution: </label>
         <input type="text" id="institution" name="institution" placeholder="" />
+
         <label htmlFor="degree">Enter the degree: </label>
         <input type="text" name="degree" id="degree" placeholder="" />
+
         <div className="dates">
           <label htmlFor="startDate">Start-Date: </label>
           <input
@@ -29,6 +31,7 @@ function EducationalDetails(props) {
             name="startDate"
             placeholder="MM/YYYY"
           />
+
           <label htmlFor="endDate">End-Date: </label>
           <input
             type="text"
@@ -37,6 +40,7 @@ function EducationalDetails(props) {
             placeholder="MM/YYYY"
           />
         </div>
+
         <button type="submit">Submit</button>
       </form>
     </section>

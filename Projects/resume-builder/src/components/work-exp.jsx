@@ -20,8 +20,10 @@ function WorkExperience(props) {
       <form onSubmit={handleSubmit} className="work-experience-form">
         <label htmlFor="Company">Company: </label>
         <input type="text" id="company" name="company" placeholder="" />
+
         <label htmlFor="title">Title: </label>
         <input type="text" id="title" name="title" placeholder="" />
+
         <div className="dates">
           <label htmlFor="startDate">Start-Date: </label>
           <input
@@ -30,6 +32,7 @@ function WorkExperience(props) {
             name="startDate"
             placeholder="MM/YYYY"
           />
+
           <label htmlFor="endDate">End-Date: </label>
           <input
             type="text"
@@ -38,10 +41,12 @@ function WorkExperience(props) {
             placeholder="MM/YYYY"
           />
         </div>
+
         <div id="desc">
           <label htmlFor="description">Description</label>
           <textarea name="description" id="description"></textarea>
         </div>
+
         <button type="submit">Submit</button>
       </form>
     </section>

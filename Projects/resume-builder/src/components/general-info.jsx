@@ -23,6 +23,7 @@ function GeneralInfo(props) {
           id="name"
           placeholder="Enter your name"
         />
+
         <label htmlFor="email">Email: </label>
         <input
           type="email"
@@ -30,6 +31,7 @@ function GeneralInfo(props) {
           id="email"
           placeholder="eg: you@example.com"
         />
+
         <label htmlFor="contactNumber">Contact Number: </label>
         <input
           type="nubmer"
@@ -37,6 +39,7 @@ function GeneralInfo(props) {
           id="contactNumber"
           placeholder=""
         />
+
         <button type="submit">Submit</button>
       </form>
     </section>
