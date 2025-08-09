@@ -1,6 +1,17 @@
 function EducationalDetails(props) {
-  const { handleEducationalDetails } = props;
-  const handleSubmit = (event) => {};
+  const { handleEducationalInfo } = props;
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    event.target.reset();
+
+    const institution = formData.get("institution");
+    const degree = formData.get("degree");
+    const startDate = formData.get("startDate");
+    const endDate = formData.get("endDate");
+
+    handleEducationalInfo({ institution, degree, startDate, endDate });
+  };
 
   return (
     <section className="education-details">
@@ -26,8 +37,8 @@ function EducationalDetails(props) {
             placeholder="MM/YYYY"
           />
         </div>
+        <button type="submit">Submit</button>
       </form>
-      <button type="submit">Submit</button>
     </section>
   );
 }

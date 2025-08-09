@@ -4,8 +4,14 @@ function WorkExperience(props) {
     event.preventDefault();
     const formData = new FormData(event.target);
     event.target.reset();
+
     const company = formData.get("company");
-    console.log(company);
+    const title = formData.get("title");
+    const startDate = formData.get("startDate");
+    const endDate = formData.get("endDate");
+    const description = formData.get("description");
+
+    handleWorkExperience({ company, title, startDate, endDate, description });
   };
 
   return (

@@ -1,10 +1,20 @@
 function GeneralInfo(props) {
   const { handleGeneralInfo } = props;
-  const handleSubmit = (event) => {};
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    event.target.reset();
+
+    const name = formData.get("name");
+    const email = formData.get("email");
+    const contactNumber = formData.get("contactNumber");
+
+    handleGeneralInfo({ name, email, contactNumber });
+  };
 
   return (
     <section className="general-info">
-      <h1>Enter Your detials</h1>
+      <h1>Enter Your details</h1>
       <form onSubmit={handleSubmit} className="general-info-form">
         <label htmlFor="name">Name: </label>
         <input
@@ -25,10 +35,10 @@ function GeneralInfo(props) {
           type="nubmer"
           name="contactNumber"
           id="contactNumber"
-          placeholder="Enter your contact number"
+          placeholder=""
         />
+        <button type="submit">Submit</button>
       </form>
-      <button type="submit">Submit</button>
     </section>
   );
 }
