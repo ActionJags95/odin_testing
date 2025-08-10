@@ -1,0 +1,71 @@
+.education-details,
+.general-info,
+.work-experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  width: 500px;
+  margin: 20px 20px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  box-shadow: 0px 0px 5px 1px #bdbdbd;
+}
+
+.education-details > form,
+.general-info > form,
+.work-experience > form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 400px;
+  /* height: 300px; */
+}
+
+.education-details > h1,
+.general-info > h1,
+.work-experience > h1 {
+  margin: 10px 10px;
+  font-size: 25px;
+}
+
+.input-field {
+  display: flex;
+  justify-content: center;
+  width: 450px;
+  margin: 7px 0px;
+  width: 100%;
+  padding: 0;
+  font-size: 17px;
+}
+.input-item {
+  border: none;
+  outline: none;
+  background-color: inherit;
+  border-bottom: 3px solid black;
+  text-align: center;
+  /* flex: 1; */
+  max-width: 300px;
+  margin-left: 1rem;
+}
+.dates {
+  display: flex;
+  width: 400px;
+}
+#startDate,
+#endDate {
+  width: 70px;
+  text-align: start;
+}
+
+form > button {
+  border: none;
+  background-color: #555555;
+  color: white;
+  width: 100px;
+  height: 30px;
+  font-size: 15px;
+  margin-top: 10px;
+  border-radius: 7px;
+}
