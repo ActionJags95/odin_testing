@@ -1,7 +1,7 @@
 import { useState } from "react";
-import GeneralInfo from "./components/general-info";
-import EducationalDetails from "./components/edu-details";
-import WorkExperience from "./components/work-exp";
+import GeneralInfo from "./components/input-area/general-info.jsx";
+import EducationalDetails from "./components/input-area/edu-details";
+import WorkExperience from "./components/input-area/work-exp";
 import "./App.css";
 function App() {
   const [generalInfo, setGeneralInfo] = useState({});
@@ -23,17 +23,13 @@ function App() {
   };
 
   return (
-    <div>
-      <GeneralInfo handleGeneralInfo={handleGeneralInfo} />
-      <EducationalDetails handleEducationalInfo={handleEducationalInfo} />
-      <WorkExperience handleWorkExperience={handleWorkExperience} />
-
-      <div>
-        {educationInfo.length > 0 &&
-          educationInfo.map((item) => {
-            return <p>{item.institution}</p>;
-          })}
-      </div>
+    <div className="resume-builder">
+      <section className="input-section">
+        <GeneralInfo handleGeneralInfo={handleGeneralInfo} />
+        <EducationalDetails handleEducationalInfo={handleEducationalInfo} />
+        <WorkExperience handleWorkExperience={handleWorkExperience} />
+      </section>
+      <section className="resume-output"></section>
     </div>
   );
 }
