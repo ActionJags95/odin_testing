@@ -2,7 +2,8 @@ import "./common.css";
 import "./general-info.css";
 
 function GeneralInfo(props) {
-  const { handleGeneralInfo } = props;
+  const { handleNameChange, handleEmailChange, handleContactChange, data } =
+    props;
   const handleSubmit = (event) => {
     event.preventDefault();
     const formData = new FormData(event.target);
@@ -27,6 +28,8 @@ function GeneralInfo(props) {
             id="name"
             placeholder="Enter your name"
             className="input-item"
+            value={data.name}
+            onChange={(event) => handleNameChange(event.target.value)}
           />
         </div>
 
@@ -38,6 +41,8 @@ function GeneralInfo(props) {
             id="email"
             placeholder="eg: you@example.com"
             className="input-item"
+            value={data.email}
+            onChange={(event) => handleEmailChange(event.target.value)}
           />
         </div>
 
@@ -49,6 +54,8 @@ function GeneralInfo(props) {
             id="contactNumber"
             placeholder=""
             className="input-item"
+            value={data.contactNumber}
+            onChange={(event) => handleContactChange(event.target.value)}
           />
         </div>
 

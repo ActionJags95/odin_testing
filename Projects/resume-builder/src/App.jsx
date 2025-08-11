@@ -4,11 +4,15 @@ import EducationalDetails from "./components/input-area/edu-details";
 import WorkExperience from "./components/input-area/work-exp";
 import "./App.css";
 function App() {
-  const [generalInfo, setGeneralInfo] = useState({});
-  const handleGeneralInfo = (generalData) => {
-    setGeneralInfo(generalData);
-    console.log(generalData);
-  };
+  const [name, setName] = useState("");
+  const handleNameChange = (newName) => setName(newName);
+
+  const [email, setEmail] = useState("");
+  const handleEmailChange = (newEmail) => setEmail(newEmail);
+
+  const [contactNumber, setContactNumber] = useState("");
+  const handleContactChange = (newContactNumber) =>
+    setContactNumber(newContactNumber);
 
   const [educationInfo, setEducationInfo] = useState([]);
   const handleEducationalInfo = (educationalData) => {
@@ -25,11 +29,20 @@ function App() {
   return (
     <div className="resume-builder">
       <section className="input-section">
-        <GeneralInfo handleGeneralInfo={handleGeneralInfo} />
+        <GeneralInfo
+          handleNameChange={handleNameChange}
+          handleEmailChange={handleEmailChange}
+          handleContactChange={handleContactChange}
+          data={(name, email, contactNumber)}
+        />
         <EducationalDetails handleEducationalInfo={handleEducationalInfo} />
         <WorkExperience handleWorkExperience={handleWorkExperience} />
       </section>
       <section className="resume-output"></section>
+
+      <p>{email}</p>
+      <p>{name}</p>
+      <p>{contactNumber}</p>
     </div>
   );
 }
