@@ -13,7 +13,9 @@ function GeneralInfo(props) {
     const email = formData.get("email");
     const contactNumber = formData.get("contactNumber");
 
-    handleGeneralInfo({ name, email, contactNumber });
+    handleNameChange(name);
+    handleEmailChange(email);
+    handleContactChange(contactNumber);
   };
 
   return (
