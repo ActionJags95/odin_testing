@@ -22,7 +22,7 @@ function WorkExperience(props) {
       <h1>Work Experience</h1>
       <form onSubmit={handleSubmit} className="work-experience-form">
         <div id="companyInput" className="input-field">
-          <label htmlFor="Company">Company: </label>
+          <label htmlFor="company">Company: </label>
           <input
             type="text"
             id="company"
