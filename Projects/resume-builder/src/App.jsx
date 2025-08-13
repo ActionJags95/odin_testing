@@ -2,6 +2,7 @@ import { useState } from "react";
 import GeneralInfo from "./components/input-area/general-info.jsx";
 import EducationalDetails from "./components/input-area/edu-details";
 import WorkExperience from "./components/input-area/work-exp";
+import Resume from "./components/output-area/index.jsx";
 import "./App.css";
 function App() {
   const [name, setName] = useState("");
@@ -38,11 +39,12 @@ function App() {
         <EducationalDetails handleEducationalInfo={handleEducationalInfo} />
         <WorkExperience handleWorkExperience={handleWorkExperience} />
       </section>
-      <section className="resume-output"></section>
 
-      <p>{email}</p>
-      <p>{name}</p>
-      <p>{contactNumber}</p>
+      <Resume
+        data={{ name, email, contactNumber }}
+        eduInfo={educationInfo}
+        workExp={workExperience}
+      />
     </div>
   );
 }
