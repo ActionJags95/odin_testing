@@ -18,13 +18,11 @@ function App() {
   const [educationInfo, setEducationInfo] = useState([]);
   const handleEducationalInfo = (educationalData) => {
     setEducationInfo((prevData) => [...prevData, educationalData]);
-    console.log(educationInfo);
   };
 
   const [workExperience, setWorkExperience] = useState([]);
   const handleWorkExperience = (workExpItem) => {
     setWorkExperience((prevWorkExpInfo) => [...prevWorkExpInfo, workExpItem]);
-    console.log(workExperience);
   };
 
   return (

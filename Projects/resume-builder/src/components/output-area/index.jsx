@@ -3,7 +3,7 @@ import GeneralInfo from "./generalInfo";
 import WorkExpInfo from "./workExp";
 function Resume(props) {
   const { data, eduInfo, workExp } = props;
-  console.log(props);
+
   return (
     <div id="resume-area">
       <div id="resume">

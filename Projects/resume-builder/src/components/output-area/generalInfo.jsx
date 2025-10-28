@@ -4,7 +4,6 @@ import emailIcon from "/src/assets/icons/email.png";
 
 function GeneralInfo(props) {
   const { name, email, contactNumber } = props.data;
-  console.log(props);
 
   return (
     <section className="general-section">
