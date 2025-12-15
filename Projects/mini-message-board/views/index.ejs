@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Message Board</title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap"
+    rel="stylesheet">
+</head>
+
+<body>
+  <header id="navbar">
+    <nav>
+      <h1 id="title" style="margin-left: 50px;">Message Board</h1>
+    </nav>
+    <button id="add-message-button">
+      <img src="/add-button.png" alt="">
+    </button>
+  </header>
+
+  <dialog id="form-dialog">
+    <%- include('form') %>
+  </dialog>
+
+  <div id="message-container">
+      <%- include("messages"), {messages: messages} %>
+  </div>
+</body>
+
+<script>
+  const formDialog = document.querySelector("#form-dialog")
+  const addButton = document.querySelector("#add-message-button")
+  addButton.addEventListener('click', () => {
+    formDialog.showModal()
+  })
+</script>
+
+</html>
