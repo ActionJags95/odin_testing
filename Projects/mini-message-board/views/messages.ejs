@@ -1,0 +1,48 @@
+<% messages.map((message)=> { %>
+  <div class="message-div" id=<%=message.id %>>
+    <h1 style="margin: 10px 0px;">
+      <%= message.user %>
+    </h1>
+    <p>
+      <%= message.text %>
+    </p>
+    <div class="message-footer-area">
+      <button class="delete-message-button" onclick="deleteMessage(this)">
+        <img src="/delete-icon.svg" alt="" style="width: 20px;filter: invert(100);">
+      </button>
+      <p style=" color: #b5b5b5; margin: 0; padding: 0; font-size: 15px;">
+        <%= message.added.toDateString() %>, <%= message.added.getHours() + ":" + message.added.getMinutes() %>
+      </p>
+    </div>
+  </div>
+  <script>
+    async function deleteMessage(button) {
+      const messageId = button.closest(".message-div").id;
+      console.log(messageId);
+      const data = {
+        messageId: messageId
+      }
+      console.log(data)
+
+      try {
+        const res = await fetch("/delete", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data)
+        })
+        if (!res.ok) {
+          throw new Error("Operation is not successful", res.status)
+        }
+        if (res.status === 200) {
+          window.location.reload()
+        }
+      } catch (err) {
+        console.error(err)
+      } finally {
+        console.log("Message Delete request sent...")
+      }
+    }
+  </script>
+  <% }) %>
