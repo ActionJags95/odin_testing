@@ -54,3 +54,10 @@ const userCreatePost = [
     res.redirect("/");
   },
 ];
+
+const userDeletePost = (req, res) => {
+  const id = req.params.id;
+  userStorage.deleteUser(id);
+  return res.redirect("/");
+};
+export { userListGet, userCreateGet, userCreatePost, userDeletePost };
