@@ -1,3 +1,4 @@
+import { body, validationResult, matchedData } from "express-validator";
 import userStorage from "../storage/userStorage.js";
 /*
  * 1. all users display page /
@@ -21,4 +22,22 @@ const userCreateGet = (req, res) => {
   });
 };
 
-export { userListGet, userCreateGet };
+const alphaError = "Must only contain letters";
+const lengthError = "must be between 1 and 10 characters";
+
+const validateUser = [
+  body("id").isNumeric(),
+  body("firstName")
+    .trim()
+    .isAlpha()
+    .withMessage(alphaError)
+    .isLength({ min: 1, max: 10 })
+    .withMessage(`First Name ${lengthError}`),
+  body("lastName")
+    .trim()
+    .isAlpha()
+    .withMessage(alphaError)
+    .isLength({ min: 1, max: 10 })
+    .withMessage(`Last Name ${lengthError}`),
+];
+
