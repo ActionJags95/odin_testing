@@ -1,5 +1,10 @@
 import { Router } from "express";
-import { userListGet, userCreateGet } from "../controllers/userController.js";
+import {
+  userListGet,
+  userCreateGet,
+  userCreatePost,
+  userDeletePost,
+} from "../controllers/userController.js";
 
 const userRouter = Router();
 
