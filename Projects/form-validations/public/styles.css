@@ -60,8 +60,6 @@ header {
   color: white;
 }
 
-
-
 .user-area {
   display: grid;
   width: 100%;
@@ -80,19 +78,19 @@ header {
   box-shadow: 0px 0px 5px 1px #a3a3a345;
 }
 
-.user>.details {
+.user > .details {
   padding: 0px 10px;
 }
 
-.user>h1 {
-  margin: 20px 0px
+.user > h1 {
+  margin: 20px 0px;
 }
 
-.details>p {
+.details > p {
   margin: 10px 0px;
 }
 
-.user>.buttons {
+.user > .buttons {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
@@ -109,7 +107,9 @@ form-submit-button {
   padding: 5px 25px;
   border-radius: 7px;
   box-shadow: 0px 0px 2px 0.1px #7e7e7e87;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .buttons button:hover {
@@ -118,10 +118,10 @@ form-submit-button {
   transform: scale(1.1);
 }
 
-button>a {
+button > a {
   text-decoration: none;
   color: black;
-}}
+}
 
 #form-div {
   display: flex;
