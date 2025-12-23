@@ -1,12 +1,12 @@
 import { body, validationResult, matchedData } from "express-validator";
 import userStorage from "../storage/userStorage.js";
 /*
- * 1. all users display page /
- * 2. create user get
- * 3. create user post
+ * 1. all users display page / --done
+ * 2. create user get --done
+ * 3. create user post --partially done, need to pass errors to get, if any
  * 4. update user get
  * 5. update user post
- * 6. delete user
+ * 6. delete user --done
  */
 
 const userListGet = (req, res) => {
