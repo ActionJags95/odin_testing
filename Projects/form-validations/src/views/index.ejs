@@ -25,23 +25,23 @@
       <% users.forEach(user=> { %>
         <div class="user">
           <h1>
-            <%= user.firstName %>
+            <%= user.getFirstName() %>
           </h1>
           <div class="details">
             <p>
-              ID: <%= user.id %>
+              ID: <%= user.getID() %>
             </p>
             <p>
-              First Name: <%= user.firstName %>
+              First Name: <%= user.getFirstName() %>
             </p>
             <p>
-              Last Name: <%= user.lastName %>
+              Last Name: <%= user.getLastName() %>
             </p>
           </div>
           <div class="buttons">
-            <button><a href="/<%= user.id %>/update">Update</a></button>
-            <form action="/<%= user.id %>/delete"><button type="submit"
-                onclick="return confirm('Are you sure you want to delete this user?')">Submit</button></form>
+            <button><a href="/<%= user.getID() %>/update">Update</a></button>
+            <form action="/<%= user.getID() %>/delete" method="post"><button type="submit"
+                onclick="return confirm('Are you sure you want to delete this user?')">Delete User</button></form>
           </div>
         </div>
         <% }); %>
