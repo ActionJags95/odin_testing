@@ -1,3 +1,4 @@
+import userStorage from "../storage/userStorage.js";
 /*
  * 1. all users display page /
  * 2. create user get
@@ -7,38 +8,10 @@
  * 6. delete user
  */
 
-const users = [
-  {
-    id: 1,
-    firstName: "Jags",
-    lastName: "Jags",
-  },
-  {
-    id: 1,
-    firstName: "Jags",
-    lastName: "Jags",
-  },
-  {
-    id: 2,
-    firstName: "Hello",
-    lastName: "Hello",
-  },
-  {
-    id: 2,
-    firstName: "Hello",
-    lastName: "Hello",
-  },
-  {
-    id: 2,
-    firstName: "Hello",
-    lastName: "Hello",
-  },
-];
-
 const userListGet = (req, res) => {
   res.render("index", {
     title: "Hello",
-    users: users,
+    users: userStorage.getAllUsers(),
   });
 };
 
