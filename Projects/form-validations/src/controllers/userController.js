@@ -41,3 +41,16 @@ const validateUser = [
     .withMessage(`Last Name ${lengthError}`),
 ];
 
+const userCreatePost = [
+  validateUser,
+  (req, res) => {
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.redirect("/create");
+    }
+
+    const { id, firstName, lastName } = matchedData(req);
+    userStorage.addUser(id, firstName, lastName);
+    res.redirect("/");
+  },
+];
