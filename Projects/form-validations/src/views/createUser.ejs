@@ -15,7 +15,33 @@
     <%= title %>
       <button class="header-button"><a href="/">Back to home</a></button>
   </header>
+  <div id="form-div">
+    <form action="/create" method="post" id="create-user-form" class="buttons">
+      <div class="input-field">
+        <label for="id">ID:</label>
+        <input type="number" placeholder="Enter ID" name="id" id="id">
+      </div>
 
+      <div class="input-field">
+        <label for="firstName">First name: </label>
+        <input type="text" placeholder="Enter First Name" name="firstName" id="firstName">
+      </div>
+
+      <div class="input-field">
+        <label for="lastName">Last name: </label>
+        <input type="text" placeholder="Enter Last Name" name="lastName" id="lastName">
+      </div>
+
+      <button id="form-submit-button" type="submit">Submit</button>
+    </form>
+  </div>
+  <% if(locals.errors) { %>
+    <% errors.forEach(error=> { %>
+      <li>
+        <%= error %>
+      </li>
+      <% }) %>
+        <% } %>
 </body>
 
 </html>
