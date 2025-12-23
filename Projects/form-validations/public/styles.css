@@ -98,7 +98,8 @@ header {
   justify-content: space-around;
 }
 
-.buttons button {
+.buttons button,
+form-submit-button {
   background-color: wheat;
   border: none;
   color: black;
