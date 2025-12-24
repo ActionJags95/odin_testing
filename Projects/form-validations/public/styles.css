@@ -30,6 +30,8 @@ header {
   font-weight: bold;
   border: none;
   background-color: #02024c;
+  text-decoration: none;
+  color: white;
   /* border: 2px solid #02024c; */
 }
 
@@ -53,11 +55,6 @@ header {
 
 .header-button:hover::after {
   transform: translateX(-50%) scaleX(1);
-}
-
-.header-button a {
-  text-decoration: none;
-  color: white;
 }
 
 .user-area {
