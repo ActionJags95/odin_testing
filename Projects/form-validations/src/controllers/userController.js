@@ -44,6 +44,7 @@ const validateUser = [
 const userCreatePost = [
   validateUser,
   (req, res) => {
+    console.log("In create post");
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.redirect("/create");
@@ -85,4 +86,11 @@ const userDeletePost = (req, res) => {
   userStorage.deleteUser(id);
   return res.redirect("/");
 };
-export { userListGet, userCreateGet, userCreatePost, userDeletePost };
+export {
+  userListGet,
+  userCreateGet,
+  userCreatePost,
+  userUpdateGet,
+  userUpdatePost,
+  userDeletePost,
+};

@@ -3,6 +3,8 @@ import {
   userListGet,
   userCreateGet,
   userCreatePost,
+  userUpdateGet,
+  userUpdatePost,
   userDeletePost,
 } from "../controllers/userController.js";
 
