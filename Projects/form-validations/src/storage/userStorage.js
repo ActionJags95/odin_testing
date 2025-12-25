@@ -44,6 +44,10 @@ class UserStorage {
     targetUser.updateFirstName(firstName);
     targetUser.updateLastName(lastName);
   }
+
+  getUser(id) {
+    return this.#userArray.find((user) => id === user.getID());
+  }
 }
 
 export default new UserStorage();
