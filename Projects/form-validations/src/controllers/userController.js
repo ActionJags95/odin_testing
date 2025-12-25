@@ -55,6 +55,16 @@ const userCreatePost = [
   },
 ];
 
+const userUpdateGet = (req, res) => {
+  const userID = req.params.id;
+  const reqUser = userStorage.getUser(userID);
+
+  res.render("updateUser", {
+    title: "Update User",
+    user: reqUser,
+  });
+};
+
 const userDeletePost = (req, res) => {
   const id = req.params.id;
   userStorage.deleteUser(id);
