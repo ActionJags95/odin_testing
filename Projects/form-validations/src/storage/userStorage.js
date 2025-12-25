@@ -39,8 +39,7 @@ class UserStorage {
   getAllUsers = () => this.#userArray;
 
   updateUser(id, firstName, lastName) {
-    const userIndex = this.#userArray.find((user) => id === user.getID());
-    const targetUser = this.#userArray[userIndex];
+    const targetUser = this.#userArray.find((user) => id === user.getID());
     targetUser.updateFirstName(firstName);
     targetUser.updateLastName(lastName);
   }
