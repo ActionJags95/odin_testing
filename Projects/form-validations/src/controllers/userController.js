@@ -65,6 +65,21 @@ const userUpdateGet = (req, res) => {
   });
 };
 
+const userUpdatePost = [
+  validateUser,
+  (req, res) => {
+    console.log("In update post");
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+      return res.redirect("/create");
+    }
+
+    const { id, firstName, lastName } = matchedData(req);
+    userStorage.updateUser(id, firstName, lastName);
+    res.redirect("/");
+  },
+];
+
 const userDeletePost = (req, res) => {
   const id = req.params.id;
   userStorage.deleteUser(id);
